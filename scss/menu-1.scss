@@ -1,0 +1,197 @@
+@import "./mixins/mixins";
+
+
+
+$color-primary: rgb(86, 156, 135);
+$color-secondary: rgb(252, 202, 70);
+$cd-btn-end: rgb(56, 126, 105);
+
+
+ 
+ body{
+    width: 1887px;
+}
+
+header{
+    text-align: center;
+    background-color: $color-primary;
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: -0.5rem;
+    color: $color-secondary;
+    width: 100%;
+    margin-top: -3.5%;
+    padding-bottom: 1px;
+    padding-right: 0.85%;
+    margin-left: -0.4%;
+}
+
+h1{
+    padding-top: 2%;
+}
+
+h2{
+
+    &::after{
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background:black;
+        transition: width .5s;
+    }
+
+    &:hover::after{
+        width: 83%;
+        transition: .5s;
+    }
+}
+
+
+.container-titre{
+    font-family: sans-serif;
+    font-size: 30px;
+    width: 25%;
+    margin-left: 40%;
+}
+
+.container-menu{
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+img{
+    width: 700px;
+}
+
+
+.container-btn {
+    background-color: $color-primary;
+    text-align: center;
+    margin-left: 42%;
+    margin-right: 42%;
+    margin-bottom: 8%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    font-family: Arial;
+    color: $color-secondary;
+    cursor: pointer;
+    transition: transform 500ms, background-color 500ms;
+    &:hover{
+        transform: scale(1.15);
+        background-color: $cd-btn-end;
+        
+    }
+  }
+
+    a{
+    text-decoration: none;
+    color: $color-secondary;
+    }
+  
+  .container-btn:hover {
+    transform: scale(1.15);
+    background-color: #387e69;
+  }
+  
+
+ .container-foot{
+    text-align: center;
+    background-color: $color-primary;
+    color: $color-secondary;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 25px;
+    font-family: Arial;
+    position: fixed;
+    bottom: 0px;
+    width: 97.6%;
+   
+    &__elmnt{
+        animation: wiggle 3s (infinite);
+    }
+
+}
+
+a{
+    text-decoration: none;
+    color: $color-secondary;
+    
+    &:hover{
+        color: yellow;
+    }
+}
+
+@keyframes wiggle{
+0% {transform: rotate(0deg)}
+3% {transform: rotate(-2deg)}
+4% {transform: rotate(2deg)}
+5% {transform: rotate(0deg)}
+100% {transform: rotate(0deg)}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1550px){
+    body{
+       width: 1550px;
+    }
+    
+    header{
+        width: 100%;
+       
+    }
+
+    .container-btn{
+        width: 20%;
+        margin-left: 40%;
+        margin-bottom: 0%;
+    }
+    
+    .container-titre{
+    font-family: sans-serif;
+    font-size: 30px;
+    width: 60%;
+    margin-left: 35%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    body{
+        width: 767px;
+    }
+
+    header{
+        width: 136.5%;
+        padding-top: 0.1%;
+        padding-right: 1.8%;
+    }
+
+    .container-titre{
+        margin-left: 40%;
+        font-family: sans-serif;
+        font-size: 30px;
+        width: 60%;
+
+        
+    }
+
+    .container-menu{
+        margin-left: 21.5%;
+    }
+
+    .container-btn{
+        margin-top: 10%;
+        width: 45%;
+        margin-left: 45%;
+    }
+
+    .container-foot{
+        width: 96.7%;
+    }
+}

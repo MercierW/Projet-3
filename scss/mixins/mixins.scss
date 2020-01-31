@@ -1,0 +1,11 @@
+@mixin img-position {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin position {
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    
+}
