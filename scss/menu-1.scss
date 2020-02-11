@@ -1,18 +1,38 @@
-@import "./mixins/mixins";
+@font-face {
+    font-family: 'Devonshire';
+    src: url('fonts/Devonshire-Regular.eot');
+    src: url('fonts/Devonshire-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Devonshire-Regular.woff2') format('woff2'),
+        url('fonts/Devonshire-Regular.woff') format('woff'),
+        url('fonts/Devonshire-Regular.ttf') format('truetype'),
+        url('fonts/Devonshire-Regular.svg#Devonshire-Regular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Blokletters Balpen';
+        src: url('fonts/Blokletters-Balpen.eot');
+        src: url('fonts/Blokletters-Balpen.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Blokletters-Balpen.woff2') format('woff2'),
+        url('fonts/Blokletters-Balpen.woff') format('woff'),
+        url('fonts/Blokletters-Balpen.ttf') format('truetype'),
+        url('fonts/Blokletters-Balpen.svg#Blokletters-Balpen') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    $color-primary: rgb(86, 156, 135);
+    $color-secondary: rgb(252, 202, 70);
+    $cd-btn-end: rgb(56, 126, 105);
+    
+    
 
 
-
-$color-primary: rgb(86, 156, 135);
-$color-secondary: rgb(252, 202, 70);
-$cd-btn-end: rgb(56, 126, 105);
-
-
- 
- body{
-    width: 1887px;
-}
-
+    // header//--------------------->
 header{
+    display: flex;
+    justify-content: center;
     text-align: center;
     background-color: $color-primary;
     font-size: 50px;
@@ -21,17 +41,78 @@ header{
     letter-spacing: -0.5rem;
     color: $color-secondary;
     width: 100%;
-    margin-top: -3.5%;
-    padding-bottom: 1px;
-    padding-right: 0.85%;
-    margin-left: -0.4%;
+}
+    // body//--------------------->
+.container-titre{
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: 30px;
+    width: 100%;
 }
 
-h1{
-    padding-top: 2%;
+.container-menu{
+    text-align: center;
+    border: 2px black solid;
+    background-color: #fcdfdb;
+    margin: 0 20% 5% 20%;
+    height: 1300px;
+    padding-top: 3%;
+    
+
+    &__box{
+        display: flex;
+        width: 100%;
+
+        &__txt{
+            text-align: left;
+            margin-left: 15%;
+            width: 100%;
+        }
+
+        &__prix{
+            text-align: left;
+            font-weight: bold;
+            width: 30%;
+        }
+    }
 }
 
-h2{
+.note-logo{
+    width: 100px;
+    height: 110px;
+}
+
+.sous-T{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+.trait{
+    width: 26%;
+    height: 10px;
+    margin-top: 5%;
+}
+
+.note-logo-2{
+    width: 65px;
+    height: 70px;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 1px 0 0 0;
+}
+
+h3{
+    font-family: 'Devonshire';
+    font-size: 3.5em;
+    margin-top: -0.5%;
+}
+
+h4{
+    font-size: 1.5em;
 
     &::after{
         content: "";
@@ -41,83 +122,32 @@ h2{
         background:black;
         transition: width .5s;
     }
-
+    
     &:hover::after{
-        width: 83%;
+        width: 100%;
         transition: .5s;
     }
 }
 
 
-.container-titre{
-    font-family: sans-serif;
-    font-size: 30px;
-    width: 25%;
-    margin-left: 40%;
+
+h4, p{
+    font-family: 'Blokletters Balpen';
 }
 
-.container-menu{
-    text-align: center;
-    margin-bottom: 3%;
+p{
+    font-size:  0.8vw;
 }
 
-img{
-    width: 700px;
-}
-
-
-.container-btn {
-    background-color: $color-primary;
-    text-align: center;
-    margin-left: 42%;
-    margin-right: 42%;
-    margin-bottom: 8%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 30px;
-    border-radius: 10px;
-    font-family: Arial;
-    color: $color-secondary;
-    cursor: pointer;
-    transition: transform 500ms, background-color 500ms;
-    &:hover{
-        transform: scale(1.15);
-        background-color: $cd-btn-end;
-        
-    }
-  }
-
-    a{
-    text-decoration: none;
-    color: $color-secondary;
-    }
-  
-  .container-btn:hover {
-    transform: scale(1.15);
-    background-color: #387e69;
-  }
-  
-
- .container-foot{
-    text-align: center;
-    background-color: $color-primary;
-    color: $color-secondary;
+.box-note{
     display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 25px;
-    font-family: Arial;
-    position: fixed;
-    bottom: 0px;
-    width: 97.6%;
-   
-    &__elmnt{
-        animation: wiggle 3s (infinite);
-    }
+    justify-content: center;
+    margin: 5%;
+}
 
+#titre-bas{
+    font-size: 40px;
+    margin-top: 2%;
 }
 
 a{
@@ -128,7 +158,54 @@ a{
         color: yellow;
     }
 }
+// bouton//--------------------->
+.box{
+    display: flex;
+    justify-content: center;
 
+        &__btn {
+        background-color: $color-primary;
+        text-align: center;
+        width: 15%;
+        margin-bottom: 8%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        font-size: 30px;
+        border-radius: 10px;
+        font-family: Arial;
+        color: $color-secondary;
+        cursor: pointer;
+        transition: transform 500ms, background-color 500ms;
+        
+            &:hover{
+                transform: scale(1.15);
+                background-color: $cd-btn-end; 
+            }
+        }
+}
+
+// footer//--------------------->
+.footer{
+    text-align: center;
+    background-color: $color-primary;
+    color: $color-secondary;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 25px;
+    font-family: Arial;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+
+    &__elmnt{
+        animation: wiggle 3s (infinite);
+        padding: 0 1% 0 1%;
+    }
+}
+
+// Keyframes//--------------------->
 @keyframes wiggle{
 0% {transform: rotate(0deg)}
 3% {transform: rotate(-2deg)}
@@ -136,62 +213,161 @@ a{
 5% {transform: rotate(0deg)}
 100% {transform: rotate(0deg)}
 }
-
-@media screen and (min-width: 768px) and (max-width: 1550px){
-    body{
-       width: 1550px;
-    }
+// mediaqueries//--------------------->
+@media screen and (min-width: 1351px) and (max-width: 1531px){
     
-    header{
-        width: 100%;
-       
-    }
-
-    .container-btn{
-        width: 20%;
-        margin-left: 40%;
-        margin-bottom: 0%;
-    }
-    
-    .container-titre{
-    font-family: sans-serif;
-    font-size: 30px;
-    width: 60%;
-    margin-left: 35%;
+    .container-menu{
+        height: auto;
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (min-width: 768px) and (max-width: 1350px){
     body{
-        width: 767px;
-    }
-
-    header{
-        width: 136.5%;
-        padding-top: 0.1%;
-        padding-right: 1.8%;
-    }
-
-    .container-titre{
-        margin-left: 40%;
-        font-family: sans-serif;
-        font-size: 30px;
-        width: 60%;
-
-        
+        width: 100%;
+        margin: 0;
+        padding: 1px 0 0 0;
     }
 
     .container-menu{
-        margin-left: 21.5%;
+        margin: 0 15% 5% 15%;
+        height: auto;
+        
+    
+        &__box{
+            width: 100%;
+    
+            &__txt{
+                text-align: left;
+                margin-left: 15%;
+                width: 100%;
+            }
+    
+            &__prix{
+                width: 30%;
+            }
+        }
+    }
+    .container-titre{
+        font-size: 2.3vw;
     }
 
-    .container-btn{
-        margin-top: 10%;
-        width: 45%;
-        margin-left: 45%;
+    .box{
+    
+            &__btn {
+            width: 15%;
+            font-size: 2vw;
+            }
     }
 
-    .container-foot{
-        width: 96.7%;
+    .footer{
+        font-size: 2vw;
     }
+
+    .note-logo{
+        width: 7vw;
+        height: 8vw;
+    }
+
+    .note-logo-2{
+        width: 4vw;
+        height: 5vw;
+    }
+
+    #titre-bas{
+        font-size: 3vw;
+    }
+
+    h3{
+        font-size: 4vw;
+    }
+
+    h4{
+        font-size: 1.5vw;
+    }
+
+    p{
+        font-size: 1vw;
+    }
+    
+}    
+
+@media screen and (max-width: 767px){
+    body{
+        width: 100%;
+        margin: 0;
+        padding: 1px 0 0 0;
+    }
+
+    header{
+        font-size: 9vw;
+    }
+
+    .container-titre{
+        font-size: 2.6vw;
+    }
+
+    .container-menu{
+        margin: 0 0% 5% 0%;
+        height: auto;
+        
+    
+        &__box{
+            width: 100%;
+    
+            &__txt{
+                text-align: left;
+                margin-left: 0%;
+                width: 100%;
+            }
+    
+            &__prix{
+                width: 10%;
+            }
+        }
+    }
+
+    .box{
+    
+            &__btn {
+            width: 15%;
+            font-size: 3vw;
+            }
+    }
+
+    .footer{
+        font-size: 3.1vw;
+    }
+
+    .note-logo{
+        width: 7vw;
+        height: 8vw;
+    }
+
+    .note-logo-2{
+        width: 4vw;
+        height: 5vw;
+    }
+
+    #titre-bas{
+        font-size: 4.5vw;
+    }
+
+    .trait{
+        width: 26%;
+        height: 5px;
+        margin-top: 5%;
+    }
+
+    h3{
+        font-size: 6vw;
+    }
+
+    h4{
+        font-size: 2.5vw;
+    }
+
+    p{
+        font-size: 2.3vw;
+    }
+
 }

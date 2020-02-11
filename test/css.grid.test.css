@@ -1,0 +1,70 @@
+body{
+    font-size: 1vw;
+    display: flex;
+    justify-content: center;
+}
+
+
+.box{
+    width: 50%;
+    border: 1px black solid;
+}
+
+.prix{
+    font-style: bold;
+    width: 5%;
+    border: 1px black solid;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1350px){
+
+body{
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+}
+
+
+.box{
+
+    width: 50%;
+    border: 1px black solid;
+}
+
+.prix{
+ 
+    font-style: bold;
+    width: 5%;
+    border: 1px black solid;
+}
+
+}
+
+@media screen and (max-width: 767px){
+
+body{
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.box{
+
+    width: 100%;
+    border: 1px black solid;
+    margin: 0;
+    padding: 0;
+}
+
+.prix{
+
+    font-style: bold;
+    width: 5%;
+    border: 1px black solid;
+}
+
+}

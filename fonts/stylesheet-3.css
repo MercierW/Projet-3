@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Blokletters Potlood';
+    src: url('Blokletters-Potlood.eot');
+    src: url('Blokletters-Potlood.eot?#iefix') format('embedded-opentype'),
+        url('Blokletters-Potlood.woff2') format('woff2'),
+        url('Blokletters-Potlood.woff') format('woff'),
+        url('Blokletters-Potlood.ttf') format('truetype'),
+        url('Blokletters-Potlood.svg#Blokletters-Potlood') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blokletters Balpen';
+    src: url('Blokletters-Balpen.eot');
+    src: url('Blokletters-Balpen.eot?#iefix') format('embedded-opentype'),
+        url('Blokletters-Balpen.woff2') format('woff2'),
+        url('Blokletters-Balpen.woff') format('woff'),
+        url('Blokletters-Balpen.ttf') format('truetype'),
+        url('Blokletters-Balpen.svg#Blokletters-Balpen') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blokletters Viltstift';
+    src: url('Blokletters-Viltstift.eot');
+    src: url('Blokletters-Viltstift.eot?#iefix') format('embedded-opentype'),
+        url('Blokletters-Viltstift.woff2') format('woff2'),
+        url('Blokletters-Viltstift.woff') format('woff'),
+        url('Blokletters-Viltstift.ttf') format('truetype'),
+        url('Blokletters-Viltstift.svg#Blokletters-Viltstift') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
