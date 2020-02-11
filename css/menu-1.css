@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 @font-face {
   font-family: "Devonshire";
   src: url("fonts/Devonshire-Regular.eot");
@@ -13,8 +15,12 @@
   font-style: normal;
 }
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   background-color: #569c87;
   font-size: 50px;
@@ -26,8 +32,12 @@ header {
 }
 
 .container-titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: sans-serif;
   font-size: 30px;
   width: 100%;
@@ -42,6 +52,8 @@ header {
   padding-top: 3%;
 }
 .container-menu__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
@@ -62,8 +74,12 @@ header {
 }
 
 .sous-T {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 5%;
 }
 
@@ -99,10 +115,14 @@ h4::after {
   width: 0;
   height: 2px;
   background: black;
+  -webkit-transition: width 0.5s;
+  -o-transition: width 0.5s;
   transition: width 0.5s;
 }
 h4:hover::after {
   width: 100%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -115,8 +135,12 @@ p {
 }
 
 .box-note {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 5%;
 }
 
@@ -134,8 +158,12 @@ a:hover {
 }
 
 .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .box__btn {
   background-color: #569c87;
@@ -149,10 +177,16 @@ a:hover {
   font-family: Arial;
   color: #fcca46;
   cursor: pointer;
+  -webkit-transition: background-color 500ms, -webkit-transform 500ms;
+  transition: background-color 500ms, -webkit-transform 500ms;
+  -o-transition: transform 500ms, background-color 500ms;
   transition: transform 500ms, background-color 500ms;
+  transition: transform 500ms, background-color 500ms, -webkit-transform 500ms;
 }
 .box__btn:hover {
-  transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15);
   background-color: #387e69;
 }
 
@@ -160,8 +194,12 @@ a:hover {
   text-align: center;
   background-color: #569c87;
   color: #fcca46;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 1%;
   padding-bottom: 1%;
   font-size: 25px;
@@ -171,25 +209,54 @@ a:hover {
   width: 100%;
 }
 .footer__elmnt {
-  animation: wiggle 3s infinite;
+  -webkit-animation: wiggle 3s infinite;
+          animation: wiggle 3s infinite;
   padding: 0 1% 0 1%;
+}
+
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  3% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  4% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  5% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 
 @keyframes wiggle {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   3% {
-    transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   4% {
-    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   5% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 @media screen and (min-width: 1351px) and (max-width: 1531px) {
@@ -331,5 +398,3 @@ a:hover {
     font-size: 2.3vw;
   }
 }
-
-/*# sourceMappingURL=menu-1.css.map */
