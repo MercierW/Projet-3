@@ -1,12 +1,10 @@
-
-
 $color-primary: rgb(86, 156, 135);
 $color-secondary: rgb(252, 202, 70);
 $cd-btn-end: rgb(56, 126, 105);
 
 
 // HEADER //
-header{
+header {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -14,55 +12,58 @@ header{
     font-size: 50px;
     font-family: sans-serif;
     font-weight: bold;
-    letter-spacing: -0.5rem;
+    letter-spacing: -10px;
     color: $color-secondary;
     width: 100%;
 }
+
 // HEADER //
 
 // CSS pour page "nous-contacter"//
-.box-mail{
+.box-mail {
     text-align: center;
 }
-.box-mail p{
+
+.box-mail p {
     font-size: 20px;
 }
 
-.mail{
+.mail {
     color: $color-primary;
     font-size: 50px;
-    text-decoration: underline;
+    border-bottom: 2px solid $color-primary;
 }
+
 // CSS pour page "nous-contacter"//
 
-body{
+body {
     width: 100%;
     margin: 0;
     padding: 1px 0 0 0;
 }
 
-img{
+img {
     width: 400px;
     height: 500px;
     border: 2px black solid;
     box-shadow: 1px 1px 5px black;
 }
 
-.container-loupe{
+.container-loupe {
     background-color: rgb(219, 219, 219);
     width: 100%;
     border-bottom: 1px black solid;
-    border-top: 1px black solid; 
+    border-top: 1px black solid;
 }
 
-#loupe{
+#loupe {
     width: 50px;
     height: 50px;
     box-shadow: none;
     border: none;
 }
 
-.container-menu{
+.container-menu {
     display: flex;
     justify-content: center;
     display: grid;
@@ -72,36 +73,36 @@ img{
     margin: 5% 0 5% 0;
     width: 100%;
 
-    &__element{
+    &__element {
         transition: transform 500ms;
 
-        &:hover{
+        &:hover {
             transform: scale(1.15);
             border: rgb(28, 226, 28) 2px solid;
             opacity: 0.7;
-            }
         }
+    }
 }
 
 
-ul{
+ul {
     display: flex;
     justify-content: center;
     width: 10%;
     padding-top: 2%;
 }
 
-ul li{
+ul li {
     width: 15px;
     animation: load 1.4s linear infinite;
 }
 
-.box{
+.box {
     display: flex;
     justify-content: center;
 }
 
-.container-btn{
+.container-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,21 +115,22 @@ ul li{
     font-family: Arial;
     color: $color-secondary;
 
-    &__txt{
+    &__txt {
         padding-left: 2%;
     }
 }
-    
-a{
+
+a {
     text-decoration: none;
     color: $color-secondary;
-    
-    &:hover{
+
+    &:hover {
         color: yellow;
     }
 }
+
 // FOOTER //
-.footer{
+.footer {
     text-align: center;
     background-color: $color-primary;
     color: $color-secondary;
@@ -142,50 +144,84 @@ a{
     bottom: 0px;
     width: 100%;
 
-    &__elmnt{
+    &__elmnt {
         animation: wiggle 3s (infinite);
         padding: 0 1% 0 1%;
-}
-// FOOTER //
-// KEYFRAMES //
-
-}
-@keyframes wiggle{
-    0% {transform: rotate(0deg)}
-    3% {transform: rotate(-2deg)}
-    4% {transform: rotate(2deg)}
-    5% {transform: rotate(0deg)}
-    100% {transform: rotate(0deg)}
-}
-
-@keyframes load{
-    0% {transform: translateY(0)}
-    60% {transform: translateY(0)}
-    80% {transform: translateY(-10px)}
-    100% {transform: translateY(0)}
-
-}
-
-ul li:nth-child(1){
-    animation-delay: 0;
-}
-ul li:nth-child(2){
-    animation-delay: -1.2s;
-}
-ul li:nth-child(3){
-    animation-delay: -1s;
-}
-// KEYFRAMES //
-
-
-@media screen and (min-width: 768px) and (max-width: 1350px){
-    body{
-       width: 100%;
-       margin: 0;
-       padding: 1px 0 0 0;
     }
 
-    ul{
+    // FOOTER //
+    // KEYFRAMES //
+
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    3% {
+        transform: rotate(-2deg)
+    }
+
+    4% {
+        transform: rotate(2deg)
+    }
+
+    5% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes load {
+    0% {
+        transform: translateY(0)
+    }
+
+    60% {
+        transform: translateY(0)
+    }
+
+    80% {
+        transform: translateY(-10px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+
+}
+
+ul li:nth-child(1) {
+    animation-delay: 0;
+}
+
+ul li:nth-child(2) {
+    animation-delay: -1.2s;
+}
+
+ul li:nth-child(3) {
+    animation-delay: -1s;
+}
+
+// KEYFRAMES //
+
+
+@media screen and (min-width: 768px) and (max-width: 1350px) {
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 1px 0 0 0;
+    }
+
+    header {
+        letter-spacing: -5px;
+    }
+
+    ul {
         display: flex;
         justify-content: center;
         width: 15%;
@@ -193,14 +229,14 @@ ul li:nth-child(3){
         padding: 0;
     }
 
-    #loupe{
+    #loupe {
         width: 3.8vw;
         height: 3.8vw;
         box-shadow: none;
         border: none;
     }
 
-    .container-btn{
+    .container-btn {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -212,21 +248,21 @@ ul li:nth-child(3){
         border-radius: 10px;
         font-family: Arial;
         color: $color-secondary;
-    
-        &__txt{
+
+        &__txt {
             padding-left: 2%;
             margin-right: 15%;
         }
     }
 
-    img{
+    img {
         width: 30vw;
         height: 40vw;
         border: 2px black solid;
         box-shadow: 1px 1px 5px black;
     }
 
-    .container-menu{
+    .container-menu {
         display: flex;
         justify-content: center;
         display: grid;
@@ -235,18 +271,19 @@ ul li:nth-child(3){
         grid-gap: 100px;
         margin: 5% 0 5% 0;
         width: 100%;
-    
-        &__element{
+
+        &__element {
             transition: transform 500ms;
-    
-            &:hover{
+
+            &:hover {
                 transform: scale(1.15);
                 border: none;
                 opacity: 0.7;
-                }
             }
+        }
     }
-    .footer{
+
+    .footer {
         text-align: center;
         background-color: $color-primary;
         color: $color-secondary;
@@ -259,22 +296,22 @@ ul li:nth-child(3){
         position: fixed;
         bottom: 0px;
         width: 100%;
-    
-            &__elmnt{
-                animation: wiggle 3s (infinite);
-                padding: 0 1% 0 1%;
+
+        &__elmnt {
+            animation: wiggle 3s (infinite);
+            padding: 0 1% 0 1%;
         }
     }
 }
 
-@media screen and (max-width: 767px){
-    body{
+@media screen and (max-width: 767px) {
+    body {
         width: 100%;
         margin: 0;
         padding: 1px 0 0 0;
     }
 
-    header{
+    header {
         display: flex;
         justify-content: center;
         text-align: center;
@@ -282,32 +319,32 @@ ul li:nth-child(3){
         font-size: 6vw;
         font-family: sans-serif;
         font-weight: bold;
-        letter-spacing: -0.4rem;
+        letter-spacing: -2px;
         color: $color-secondary;
         width: 100%;
     }
 
-    #loupe{
+    #loupe {
         width: 5vw;
         height: 5vw;
         box-shadow: none;
         border: none;
     }
 
-    ul{
+    ul {
         display: flex;
         justify-content: center;
         width: 15%;
         padding-top: 2%;
-        padding-left: 0;
+        padding-left: 3%;
     }
- 
-    ul li{
+
+    ul li {
         width: 15px;
         animation: load 1.4s linear infinite;
     }
 
-    .container-btn{
+    .container-btn {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -315,45 +352,43 @@ ul li:nth-child(3){
         width: 27%;
         margin-bottom: 10%;
         padding-left: 2.5%;
-        font-size: 2.5vw;
+        font-size: 3vw;
         border-radius: 10px;
         font-family: Arial;
         color: $color-secondary;
-    
-        &__txt{
+
+        &__txt {
             padding-left: 2%;
-            margin-right:  15%;
+            margin-right: 15%;
         }
     }
 
-    img{
-        width: 30vw;
-        height: 40vw;
+    img {
+        width: 90vw;
+        height: 100vw;
+        margin-top: 5%;
         border: 2px black solid;
         box-shadow: 1px 1px 5px black;
     }
 
-    .container-menu{
+    .container-menu {
         display: flex;
-        justify-content: center;
-        display: grid;
-        grid-template-columns: 30.7vw 30.7vw;
-        grid-template-rows: 40.7vw 40.7vw;
-        grid-gap: 50px;
-        margin: 5% 0 5% 0;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
-    
-        &__element{
+
+        &__element {
             transition: transform 500ms;
-    
-            &:hover{
+
+            &:hover {
                 transform: scale(1.15);
                 border: none;
                 opacity: 0.7;
-                }
             }
+        }
     }
-    .footer{
+
+    .footer {
         text-align: center;
         background-color: $color-primary;
         color: $color-secondary;
@@ -361,16 +396,16 @@ ul li:nth-child(3){
         justify-content: space-between;
         padding-top: 1%;
         padding-bottom: 1%;
-        font-size: 2.5vw;
+        font-size: 3.5vw;
         font-family: Arial;
         position: fixed;
         bottom: 0px;
         width: 100%;
-    
-            &__elmnt{
-                animation: wiggle 3s (infinite);
-                padding: 0 1% 0 1%;
+
+        &__elmnt {
+            animation: wiggle 3s (infinite);
+            padding: 0 1% 0 1%;
         }
     }
-    
+
 }

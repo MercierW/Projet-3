@@ -25,7 +25,7 @@ header{
     font-size: 50px;
     font-family: sans-serif;
     font-weight: bold;
-    letter-spacing: -0.5rem;
+    letter-spacing: -10px;
     color: $color-secondary;
     width: 100%;
     }
@@ -309,6 +309,10 @@ a{
         padding: 1px 0 0 0;
     }
 
+    header{
+        letter-spacing: -5px;
+    }
+
     .container-titre{
         font-size: 2.3vw;
     }
@@ -367,6 +371,7 @@ a{
 
     header{
         font-size: 9vw;
+        letter-spacing: -2px;
     }
 
     .container-titre{
