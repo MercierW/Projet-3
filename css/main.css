@@ -1,7 +1,6 @@
 header {
   display: flex;
   justify-content: center;
-  text-align: center;
   background-color: #569c87;
   font-size: 50px;
   font-family: sans-serif;
@@ -185,7 +184,7 @@ a:hover {
   }
 }
 ul li:nth-child(1) {
-  animation-delay: 0;
+  animation-delay: 0s;
 }
 
 ul li:nth-child(2) {
