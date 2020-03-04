@@ -25,6 +25,27 @@ header {
   border-bottom: 2px solid #569c87;
 }
 
+.mention {
+  margin-left: 2%;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin-bottom: 10%;
+  line-height: 18px;
+}
+.mention__h2 {
+  text-decoration: underline;
+  margin-top: 4%;
+}
+.mention__h3 {
+  font-weight: lighter;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .mention {
+    font-size: 25px;
+    line-height: 26px;
+  }
+}
 body {
   width: 100%;
   margin: 0;

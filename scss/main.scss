@@ -19,7 +19,7 @@ header {
 
 // HEADER //
 
-// CSS pour page "nous-contacter"//
+// SCSS pour page "Nous-contacter"//
 .box-mail {
     text-align: center;
 }
@@ -34,7 +34,34 @@ header {
     border-bottom: 2px solid $color-primary;
 }
 
-// CSS pour page "nous-contacter"//
+// SCSS pour page "Nous-contacter"//
+
+// SCSS pour page "Mentions Légales"//
+
+.mention {
+    margin-left: 2%;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-bottom: 10%;
+    line-height: 18px;
+
+    &__h2 {
+      text-decoration: underline;
+      margin-top: 4%;  
+    }
+
+    &__h3 {
+        font-weight: lighter;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .mention {
+        font-size: 25px;
+        line-height: 26px;
+    }
+}
+
+// SCSS pour page "Mentions Légales"//
 
 body {
     width: 100%;
