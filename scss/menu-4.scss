@@ -198,6 +198,7 @@ a{
     position: fixed;
     bottom: 0px;
     width: 100%;
+    white-space: nowrap;
 
     &__elmnt{
         animation: wiggle 3s (infinite);

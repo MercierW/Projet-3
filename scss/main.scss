@@ -31,6 +31,10 @@ header {
     color: $color-primary;
     font-size: 50px;
     border-bottom: 2px solid $color-primary;
+
+    &:hover {
+        color: #4df956;
+    }
 }
 
 // SCSS pour page "Nous-contacter"//
@@ -70,7 +74,7 @@ body {
 
 img {
     width: 400px;
-    height: 500px;
+    height: auto;
     border: 2px black solid;
     box-shadow: 1px 1px 5px black;
 }
@@ -94,8 +98,8 @@ img {
     justify-content: center;
     display: grid;
     grid-template-columns: 409px 409px;
-    grid-template-rows: 509px 509px;
-    grid-gap: 100px;
+    grid-template-rows: 575px 575px;
+    grid-gap: 120px;
     margin: 5% 0 5% 0;
     width: 100%;
 
@@ -135,6 +139,7 @@ ul li {
     background-color: $color-primary;
     width: 20%;
     margin-bottom: 10%;
+    margin-top: 5%;
     padding-left: 1.5%;
     font-size: 30px;
     border-radius: 10px;
@@ -169,6 +174,7 @@ a {
     position: fixed;
     bottom: 0px;
     width: 100%;
+    white-space: nowrap;
 
     &__elmnt {
         animation: wiggle 3s (infinite);
@@ -222,7 +228,7 @@ a {
 }
 
 ul li:nth-child(1) {
-    animation-delay: 0;
+    animation-delay: 0s;
 }
 
 ul li:nth-child(2) {
@@ -283,7 +289,7 @@ ul li:nth-child(3) {
 
     img {
         width: 30vw;
-        height: 40vw;
+        height: auto;
         border: 2px black solid;
         box-shadow: 1px 1px 5px black;
     }
@@ -317,7 +323,7 @@ ul li:nth-child(3) {
         justify-content: space-between;
         padding-top: 1%;
         padding-bottom: 1%;
-        font-size: 1.8vw;
+        font-size: 3vw;
         font-family: Arial;
         position: fixed;
         bottom: 0px;
@@ -327,6 +333,14 @@ ul li:nth-child(3) {
             animation: wiggle 3s (infinite);
             padding: 0 1% 0 1%;
         }
+    }
+
+    .box-mail p {
+        font-size: 5vw;
+    }
+
+    .mail {
+        font-size: 8vw;
     }
 }
 
@@ -391,7 +405,7 @@ ul li:nth-child(3) {
 
     img {
         width: 90vw;
-        height: 100vw;
+        height: auto;
         margin-top: 5%;
         border: 2px black solid;
         box-shadow: 1px 1px 5px black;
@@ -407,7 +421,7 @@ ul li:nth-child(3) {
             transition: transform 500ms;
 
             &:hover {
-                transform: scale(1.15);
+                transform: none;
                 border: none;
                 opacity: 0.7;
             }
@@ -433,5 +447,8 @@ ul li:nth-child(3) {
             padding: 0 1% 0 1%;
         }
     }
-
+    
+    .mail {
+        font-size: 8.5vw;
+    }
 }

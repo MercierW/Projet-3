@@ -169,6 +169,7 @@ a:hover {
   position: fixed;
   bottom: 0px;
   width: 100%;
+  white-space: nowrap;
 }
 .footer__elmnt {
   animation: wiggle 3s infinite;
